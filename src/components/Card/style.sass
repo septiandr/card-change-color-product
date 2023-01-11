@@ -1,0 +1,95 @@
+body
+   background: #8E3200
+
+.container 
+    width: 500px
+    position: relative
+    height: 700px
+    background : #FFEBC1
+    border-radius: 20px
+    align-items: center
+    box-shadow: 0px 0px 39px 1px #000
+    z-index: 0
+
+%shareBuble
+    position: absolute
+    top:0
+    left: 0
+    z-index: 0
+    width: 100%
+    height: 100%
+    clip-path: circle(250px at 80% 30%)
+
+.buble[color='white']
+    @extend %shareBuble
+    background-color:#5F6769
+.buble[color='red']
+    @extend %shareBuble
+    background-color:#850000
+.buble[color='green']
+    @extend %shareBuble
+    background-color:#285430
+
+.share
+    position: absolute
+    z-index: 2
+    right: 5%
+    top:5%
+    width: 50px
+    height: 50px
+    clip-path: circle(50% at 50% 50%)
+    color: black
+    background: #ffff
+    display: flex
+    justify-content: center
+    cursor: pointer
+    align-items: center
+
+.icon
+    width: 20px
+    height: 20px
+.icon:hover
+    width: 25px
+    height: 25px
+img
+    position: absolute
+    top: 20%
+    left: 10%
+    width: 350px
+    height: 400px
+    z-index: 2
+    
+.colorContainer
+    position: absolute
+    top:70%
+    left: 10%
+label
+    color: #8E3200
+    font-weight: 800
+    font-size: 30px
+
+.colorMapping
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    margin-top: 10px
+
+%shareColor
+    width: 50px
+    height: 50px
+    clip-path: circle(50% at 50% 50%)
+    cursor: pointer
+    border-radius: 50%
+    border: 3px solid #8E3200
+
+.color[color="red"]
+    @extend %shareColor
+    background: #850000
+
+.color[color="white"]
+    @extend %shareColor
+    background: #fff
+
+.color[color="green"]
+    @extend %shareColor
+    background: #285430
